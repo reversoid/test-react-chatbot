@@ -1,0 +1,43 @@
+$font-path: "../../assets/fonts";
+
+@function get-font-path($font-name, $full-font-name, $format) {
+  @return "#{$font-path}/#{$font-name}/#{$full-font-name}.#{$format}";
+}
+
+@mixin font-src($font-name, $full-font-name) {
+  src: url(get-font-path($font-name, $full-font-name, "woff2")) format("woff2"),
+    url(get-font-path($font-name, $full-font-name, "woff")) format("woff"),
+    url(get-font-path($font-name, $full-font-name, "ttf")) format("ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  @include font-src("SFProText", "SFProText-Regular");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  @include font-src("Inter", "Inter-Regular");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  @include font-src("OpenSans", "OpenSans-Regular");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  @include font-src("OpenSans", "OpenSans-Bold");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
