@@ -9,4 +9,23 @@
   &::placeholder {
     color: #ced0d6;
   }
+  flex-grow: 2;
+
+  &.hasRightContent {
+    padding-right: 4rem;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rightContent {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
 }

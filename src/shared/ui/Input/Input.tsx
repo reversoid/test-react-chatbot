@@ -9,11 +9,18 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ contentRight, ...props }, ref) => {
     return (
-      <input
-        {...props}
-        className={classNames(styles.input, props.className)}
-        ref={ref}
-      />
+      <div className={styles.inputWrapper}>
+        <input
+          {...props}
+          className={classNames(
+            styles.input,
+            contentRight ? styles.hasRightContent : undefined,
+            props.className
+          )}
+          ref={ref}
+        />
+        {contentRight && <div className={styles.rightContent}>{contentRight}</div>}
+      </div>
     );
   }
 );
