@@ -1,0 +1,12 @@
+.messageBubble {
+  border-radius: 1.75rem;
+  padding: 0.75rem 1.25rem;
+
+  color: white;
+  background-color: var(--primary);
+
+  &.alternativeView {
+    background-color: var(--primary-light);
+    color: black;
+  }
+}

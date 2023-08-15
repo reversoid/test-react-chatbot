@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren } from "react";
+import styles from "./styles.module.scss";
 
 export const ChatContainer: FC<PropsWithChildren> = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className={styles.chatContainer}>{children}</div>;
 };

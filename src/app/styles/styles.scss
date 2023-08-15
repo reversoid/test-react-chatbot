@@ -1,6 +1,11 @@
 @import "./_reset.scss";
 @import "./_fonts.scss";
 
+:root {
+  --primary: #007AFE;
+  --primary-light: #d6e3fb;
+}
+
 html,
 body {
   font-family: "Open Sans";
