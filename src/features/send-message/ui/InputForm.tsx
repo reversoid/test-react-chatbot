@@ -1,9 +1,10 @@
 import { FC } from "react";
+import { Input } from "../../../shared/ui/Input/Input";
 
 export interface InputFormProps {
   onSendMessage?: (message: string) => void;
 }
 
 export const InputForm: FC<InputFormProps> = () => {
-  return <div>InputForm</div>;
+  return <Input type="text" placeholder="Start typing here..." />
 };

@@ -1,0 +1,12 @@
+.input {
+  background-color: white;
+  padding: 1.25rem 1.75rem;
+  border-radius: 1rem;
+  font-family: "Inter";
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: black;
+  &::placeholder {
+    color: #ced0d6;
+  }
+}
