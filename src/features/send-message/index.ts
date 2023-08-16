@@ -1,2 +1,2 @@
 export * from './ui/InputForm'
-export * from './utils/useSendMessage'
+export * from './utils/useStreamedMessage'

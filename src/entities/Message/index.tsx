@@ -5,12 +5,17 @@ import botImage from "../../assets/images/bot.svg";
 import userImage from "../../assets/images/user.svg";
 import { MessageBubble } from "./ui/MessageBubble/MessageBubble";
 
-export interface MessageProps {
+export interface Message {
   text: string;
   isYourMessage: boolean;
+  id: string;
 }
 
-export const Message: FC<MessageProps> = ({ text, isYourMessage }) => {
+export type MessageProps = { message: Message };
+
+export const Message: FC<MessageProps> = ({
+  message: { text, isYourMessage },
+}) => {
   const image = isYourMessage ? userImage : botImage;
 
   return (
